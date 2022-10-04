@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body{
+    background-color: hsl(0  0% 10%);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 200vh;
+}
+.nav-wrapper{
+    padding: 5px;
+    background-color: hsl(1 20% 20%);
+}
+nav{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    border:hsl(0 0% 20%) solid 2px;
+    background-color: hsl(1 50% 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px black;
+   z-index: 3;
+}
+nav ul{
+    
+    width: fit-content;
+    height: 100%;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+  
+
+}
+nav ul li{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+nav ul li a{
+
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+
+}
+nav ul li a:hover:before{
+    content:'* ';
+    font-size: 10px;
+}
+nav figure{
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    
+}
+nav figure img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+}
+header.desktop{
+    margin-top: 100px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+header.desktop figure{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header.desktop video{
+    width: 100%;
+    height: auto;
+}
+header.desktop .grid-display{
+    display: grid;
+}
+header.desktop figure, .overlay{
+    grid-area: 1/1;
+}
+header.desktop .overlay{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header.desktop .overlay h1{
+    color: white;
+    font-size: 10rem;
+}
+header.mobile{
+    margin-top: 100px;
+    padding: 5px;
+}
+header aside{
+    padding: 20px;
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: hsl(1 50% 40%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    border: 10px hsl(1 50% 30%) solid;
+}
+header aside p{
+    color: white;
+    font-size: 2rem;
+    font-style: italic;
+}
+@media only screen and (max-width:900px){
+    header.desktop .overlay h1{
+        font-size: 4rem;
+    }
+   header.desktop figure{
+    height: fit-content;
+   }
+   header aside p{
+    font-size: 1.2rem;
+   }
+}
+@media only screen and (min-width: 901px){
+    header.desktop figure video{
+        width: 200%;
+
+    }
+}
